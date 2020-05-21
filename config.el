@@ -20,6 +20,15 @@
 (require 'redo+)
 (global-set-key (kbd "C-_") 'redo)
 
+;; Helm
+(require 'helm-config)
+(helm-mode t)
+(global-set-key (kbd "C-x b") 'helm-mini)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+(define-key helm-map (kbd "C-h") 'delete-backward-char)
+
 ;; キーバインド
 (global-set-key (kbd "C-h") 'delete-backward-char)
 (global-set-key (kbd "M-r") 'query-replace)

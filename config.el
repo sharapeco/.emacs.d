@@ -65,9 +65,6 @@
 ;; カーソルをちかちかさせない
 (blink-cursor-mode 0)
 
-;; GUI用の設定
-(if window-system (load-file "~/.emacs.d/window-system.el"))
-
 ;; option キーは option キーとして使いたい
 (setq mac-option-modifier nil)
 (when (eq system-type 'darwin)
@@ -79,3 +76,8 @@
 (global-set-key (kbd "C-x C-b") 'buffer-menu)
 (define-key Buffer-menu-mode-map "j" 'next-line)
 (define-key Buffer-menu-mode-map "k" 'previous-line)
+
+;; ================================================================
+;; GUI用の設定
+
+(if window-system (load-file "~/.emacs.d/window-system.el"))

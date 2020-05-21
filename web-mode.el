@@ -1,35 +1,47 @@
-;; web-mode
+;; PHP
+(add-hook 'php-mode-hook '(lambda ()
+  "Hooks for php-mode."
+  (setq
+   indent-tabs-mode t
+   tab-width 6
+   c-basic-offset 6)
+  ))
+
+;; HTML
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.s?html?\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
-(defun web-mode-hook ()
-  "Hooks for Web mode."
-  (setq tab-width 4)
-  (setq web-mode-markup-indent-offset 4)
-  (setq web-mode-css-indent-offset 4)
-  (setq web-mode-code-indent-offset 4)
-  (setq web-mode-indent-style 4)
-)
-(add-hook 'web-mode-hook  'web-mode-hook)
-(eval-after-load "web-mode"
-  '(define-key web-mode-map (kbd "RET") 'newline-and-indent))
+(add-hook 'web-mode-hook '(lambda ()
+  "Hooks for web-mode."
+  (let ((IL 3))
+    (setq
+     indent-tabs-mode t
+     tab-width IL
+     web-mode-markup-indent-offset IL
+     web-mode-css-indent-offset IL
+     web-mode-code-indent-offset IL
+     web-mode-indent-style IL))
+  ))
 
-;; js-mode
-(add-hook 'js-mode-hook
-  '(lambda()
-     (setq tab-width 4)
-     (setq indent-tabs-mode t)
-     (define-key js-mode-map "\r" 'newline-and-indent)
-     ))
+;; JavaScript
+(add-hook 'js-mode-hook '(lambda()
+  "Hooks for js-mode."
+  (setq
+   indent-tabs-mode t
+   tab-width 6
+   js-indent-level 6)
+  (define-key js-mode-map "\r" 'newline-and-indent)
+  ))
 
-;; css-mode
+;; CSS
 ;(require 'less-css-mode)
 (defun my-css-mode-hook ()
-  (setq indent-tabs-mode t)
-  (setq tab-width 6)
-  (setq css-indent-level 6)
-  (setq css-indent-offset 6)
-  (setq less-css-indent-level 6)
+  "Hooks for (css|less-css)-mode."
+  (setq
+   indent-tabs-mode t
+   tab-width 6
+   css-indent-level 6
+   css-indent-offset 6
+   less-css-indent-level 6)
   (define-key css-mode-map "\r" 'newline-and-indent)
   )
 (add-hook 'css-mode-hook 'my-css-mode-hook)

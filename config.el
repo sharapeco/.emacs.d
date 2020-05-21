@@ -39,7 +39,8 @@
 (delete-selection-mode t)
 
 ;; 書式設定
-(setq-default tab-width 8)
+(setq tab-width 8)
+(setq indent-tabs-mode t)
 
 ;; 各種モード
 (load-file "~/.emacs.d/web-mode.el")

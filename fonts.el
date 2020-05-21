@@ -36,7 +36,7 @@
 (defun use-font-prop ()
   "Set font to proportional"
   (interactive)
-  (setq buffer-face-mode-face '(:family "Emberiza Sans test3" :height 135))
+  (setq buffer-face-mode-face '(:family "Emberiza Sans 12" :height 135))
   (buffer-face-mode)
   (setq line-spacing 2))
 

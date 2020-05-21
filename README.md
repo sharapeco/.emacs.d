@@ -4,6 +4,7 @@
 
 - diminish
 - helm
+- helm-ag
 - hiwin
 - markdown-mode
 - ov

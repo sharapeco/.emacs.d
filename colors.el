@@ -22,7 +22,7 @@
 (set-face-attribute 'font-lock-warning-face nil :foreground "#D34D28" :weight 'bold)
 
  ;; isearch
-(set-face-attribute 'isearch nil :background "#ffe800")
+(set-face-attribute 'isearch nil :background "#ffe800" :foreground "#2C2C2C")
 (set-face-attribute 'lazy-highlight nil :background "#fceeb8")
  
 ;; web-mode

@@ -46,3 +46,4 @@
   )
 (add-hook 'css-mode-hook 'my-css-mode-hook)
 (add-hook 'less-css-mode-hook 'my-css-mode-hook)
+(add-hook 'stylus-mode-hook 'my-css-mode-hook)

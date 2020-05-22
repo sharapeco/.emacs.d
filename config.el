@@ -63,6 +63,10 @@
 (setq helm-ag-success-exit-status '(0 2))
 (global-set-key (kbd "C-M-g") 'helm-do-ag)
 
+;; Fancy narrow
+(global-set-key (kbd "C-x n n") 'fancy-narrow-to-region)
+(global-set-key (kbd "C-x n w") 'fancy-widen)
+
 ;; ================================================================
 ;; UI
 

@@ -3,6 +3,7 @@
 ## Installed Packages
 
 - diminish
+- fancy-narrow
 - helm
 - helm-ag
 - hiwin

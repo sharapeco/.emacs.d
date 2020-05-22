@@ -57,3 +57,4 @@
  '(package-selected-packages
    (quote
     (helm-ag web-mode stylus-mode smart-mode-line sass-mode php-mode ov markdown-mode hiwin helm diminish))))
+(put 'narrow-to-region 'disabled nil)

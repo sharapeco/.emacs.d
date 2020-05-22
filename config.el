@@ -69,6 +69,9 @@
 ;; カーソルをちかちかさせない
 (blink-cursor-mode 0)
 
+;; ファイルの終端を分かりやすくする
+(setq-default indicate-empty-lines t)
+
 ;; option キーは option キーとして使いたい
 (setq mac-option-modifier nil)
 (when (eq system-type 'darwin)

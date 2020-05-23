@@ -45,6 +45,14 @@
 ;; isearch でも C-h は backspace じゃ
 (define-key isearch-mode-map (kbd "C-h") 'isearch-del-char)
 
+;; バッファの内容をすべてコピー
+(defun copy-entire-buffer ()
+  "Copy entire content of buffer."
+  (interactive)
+  (kill-new (buffer-string))
+  (message "Buffer content copied."))
+(global-set-key (kbd "C-c C-a") 'copy-entire-buffer)
+
 ;; 各種モード
 (load-file "~/.emacs.d/web-mode.el")
 (load-file "~/.emacs.d/misc-modes.el")

@@ -1,10 +1,34 @@
 ;; PHP
+(require 'cl)
+
+;; (use-package phpactor :ensure t)
+;; (use-package company-phpactor :ensure t)
+
+;; (use-package php-mode
+;;   ;;
+;;   :hook ((php-mode . (lambda () (set (make-local-variable 'company-backends)
+;;        '(;; list of backends
+;;          company-phpactor
+;;          company-files
+;;          ))))))
+
 (add-hook 'php-mode-hook '(lambda ()
   "Hooks for php-mode."
   (setq
    indent-tabs-mode t
    tab-width 6
    c-basic-offset 6)
+  ;; ac-php
+  (auto-complete-mode t)
+  (eldoc-mode t)
+  (require 'ac-php)
+  (setq ac-sources '(ac-source-php ac-source-abbrev ac-source-dictionary ac-source-words-in-same-mode-buffers))
+  (ac-php-core-eldoc-setup)
+  (yas-global-mode 1)
+  ;; phpactor
+  ;; (make-local-variable 'eldoc-documentation-function)
+  ;; (setq eldoc-documentation-function
+  ;;       'phpactor-hover)
   ))
 
 ;; HTML

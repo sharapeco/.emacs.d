@@ -56,5 +56,5 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (package-utils use-package fancy-narrow helm-ag web-mode smart-mode-line sass-mode php-mode ov markdown-mode hiwin helm diminish))))
+    (ac-php package-utils use-package fancy-narrow helm-ag web-mode smart-mode-line sass-mode php-mode ov markdown-mode hiwin helm diminish))))
 (put 'narrow-to-region 'disabled nil)

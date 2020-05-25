@@ -9,8 +9,10 @@
 - hiwin
 - markdown-mode
 - ov
+- package-utils
 - php-mode
 - rich-minority
 - sass-mode
 - smart-mode-line
+- use-package
 - web-mode

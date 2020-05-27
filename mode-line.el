@@ -7,23 +7,32 @@
 (line-number-mode t)
 
 ;; 色と余白
-(set-face-attribute 'mode-line nil
-		    :family "Menlo"
-		    :height 120
-		    :foreground "#333333"
-		    :background "#E4E0D0"
-		    :box '(:line-width 6 :color "#E4E0D0")
-		    :overline nil
-		    :underline nil)
+(let ((ff) (fs))
+  (when (eq system-type 'darwin)
+    (setq ff "Menlo")
+    (setq fs 120))
+  (when (eq system-type 'windows-nt)
+    (setq ff "Consolas")
+    (setq fs 95))
 
-(set-face-attribute 'mode-line-inactive nil
-		    :family "Menlo"
-		    :height 120
-		    :foreground "#777777"
-		    :background "#D8D6CC"
-		    :box '(:line-width 6 :color "#D8D6CC")
-		    :overline nil
-		    :underline nil)
+  (set-face-attribute 'mode-line nil
+                      :family ff
+                      :height fs
+                      :foreground "#333333"
+                      :background "#E4E0D0"
+                      :box '(:line-width 6 :color "#E4E0D0")
+                      :overline nil
+                      :underline nil)
+
+  (set-face-attribute 'mode-line-inactive nil
+                      :family ff
+                      :height fs
+                      :foreground "#777777"
+                      :background "#D8D6CC"
+                      :box '(:line-width 6 :color "#D8D6CC")
+                      :overline nil
+                      :underline nil)
+  )
 
 ;; エラー時に mode-line を flash
 (setq ring-bell-function
